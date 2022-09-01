@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+
+:root {
+    --primary-color: rgb(148, 244, 215);
+    --primary-color-text: rgb(41, 114, 118);
+    --primary-dark: rgb(20, 47, 50);
+    --primary-light: #fff;
+    --primary-btn: rgb(0, 0, 0);
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Aboreto', sans-aerif, cursive;
+    color: rgb(50, 107, 131);
+    line-height: 1.5;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+h1,
+h2 {
+    font-weight: 300;
+    line-height: 1.3;
+    margin: 10px;
+}
+
+p {
+    margin: 10px 0;
+}
+
+img {
+    width: 100%;
+}
+
+
+/*Navbar*/
+
+.navbar {
+    background-color: #464545;
+    color: #fff;
+    height: 70px;
+}
+
+.navbar ul {
+    display: flex;
+}
+
+.navbar a {
+    color: var(--primary-color);
+    padding: 10px;
+    margin: 0 5px;
+}
+
+.navbar a:hover {
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.navbar .flex {
+    justify-content: space-between;
+}
+
+/*Hero-Section(Showcase)*/
+
+.showcase {
+    height: 400px;
+    background-image: url('img/HRC2023Vasaztan1.png');
+    color: var(--primary-light);
+    position: relative;
+}
+
+.showcase h1 {
+    font-size: 40px;
+}
+
+.showcase p {
+    margin: 20px 0;
+}
+
+.showcase .grid {
+    overflow: visible;
+    grid-template-columns: 70% 30%;
+    gap: 30px;
+
+}
+
+.showcase-form {
+    position: relative;
+    top: 60px;
+    height: 350px;
+    width: 400px;
+    padding: 40px;
+    z-index: 100;
+    /* justify-self: flex-end; */
+}
+
+
+.showcase-form .form-control {
+    margin: 30px 0;
+}
+
+.showcase-form input[type='text'],
+.showcase-form input[type='email'] {
+    border: 0;
+    border-bottom: 1px solid var(--primary-color-text);
+    width: 100%;
+    padding: 3px;
+    font-size: 17px;
+}
+
+.showcase-form input:focus {
+    outline: none;
+}
+
+.showcase::before,
+.showcase::after {
+    content: '';
+    position: absolute;
+    height: 100px;
+    bottom: -70px;
+    right: 0;
+    left: 0;
+    background: #fff;
+    -webkit-transform: skewY(5deg);
+    -moz-transform: skewY(5deg);
+    -ms-transform: skewY(5deg);
+    transform: skewY(5deg);
+}
+
+
+/*Stats*/
+
+.stats {
+    padding-top: 100px;
+    /* background-color: rgb(206, 158, 158); */
+}
+
+
+.stats-heading {
+    max-width: 500px;
+    margin: auto;
+
+}
+
+.stats .grid h3 {
+    font-size: 35px;
+}
+
+.stats .grid p {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--primary-color-text);
+}
+
+/*CLI*/
+
+.cli .grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+
+}
+
+.text-center i {
+    color: rgb(35, 192, 166)
+}
+
+.cli .grid>*:first-child {
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
+}
+
+/*Cloud*/
+
+.cloud .grid {
+    grid-template-columns: 4fr 3fr;
+}
+
+/*Languages*/
+.languages .flex {
+    flex-wrap: wrap;
+
+}
+
+/*viktigt!!!!!!*/
+
+.languages .card img {
+    max-width: 150px;
+}
+
+
+.languages .card {
+    text-align: center;
+    margin: 18px 10px 40px;
+    transition: transform 0.3s ease-in;
+}
+
+.languages .card h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.languages .card:hover {
+    transform: translateY(-15px);
+}
+
+/*Footer*/
+
+.footer .social a {
+    margin: 0 10px;
+}
+
+
+
+.footer-text {
+
+    color: var(--primary-color);
+}
+
+
+
+
+/*Paddor*/
+@media (max-width: 760px) {
+
+    .grid,
+    .showcase .grid,
+    .stats .grid,
+    .cli .grid,
+    .cloud .grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .showcase {
+        height: auto;
+    }
+
+    .showcase-text {
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    .showcase-form {
+        justify-self: center;
+        margin: auto;
+    }
+
+    .cli .grid>*:first-child {
+        grid-column: 1;
+        grid-row: 1;
+    }
+}
+
+/*Mobil*/
+@media (max-width: 500px) {
+    .navbar {
+        height: 110px;
+    }
+
+    .navbar .flex {
+        flex-direction: column;
+    }
+
+
+    .navbar ul {
+        padding: 10px;
+        /* background-color: rgba(0, 0, 0, 0.2); */
+    }
+
+}
