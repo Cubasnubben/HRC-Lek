@@ -63,6 +63,38 @@
     font-family: 'Special Elite', cursive;
 }
 
+/*TEXT_COLORS*/
+
+
+.text-primary {
+    background-color: var(--primary-btn);
+    color: #fff;
+    font-family: 'Special Elite', cursive;
+}
+
+
+.text-secondary {
+
+
+    font-family: 'Special Elite', cursive;
+}
+
+
+.text-dark {
+    background-color: var(--primary-dark);
+    color: #fff;
+    font-family: 'Special Elite', cursive;
+}
+
+
+.text-light {
+    background-color: var(--primary-light);
+    color: rgb(24, 86, 67);
+    font-family: 'Special Elite', cursive;
+}
+
+
+
 /*Text-Size*/
 
 .lead {
@@ -88,6 +120,31 @@
 
 .text-center {
     text-align: center;
+}
+
+/*ALERT MERCH_SITE*/
+
+.alert {
+    background-color: var(--primary-dark);
+    padding: 10px 20px;
+    font-weight: bold;
+    color: var(--primary-light);
+    border-radius: 12px;
+    margin: 15px 0;
+}
+
+.alert i {
+    margin-right: 10px;
+}
+
+.alert-success {
+    background-color: var(--success-color);
+    color: var(--primary-dark);
+}
+
+.alert-error {
+    background-color: var(--error-color);
+    color: var(--primary-dark);
 }
 
 .flex {
